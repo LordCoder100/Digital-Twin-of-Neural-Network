@@ -1,26 +1,44 @@
 <!doctype html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Інтерактивний 3D-редактор і симулятор для проєктування, налаштування та тестування нейромереж." />
-    <title>Digital Twin of Neural Network</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <canvas id="scene"></canvas>
-    <header class="hud hud--top glass">
-      <h1 class="brand"><span class="brand__dot"></span>Digital Twin <span class="brand__muted">of Neural Network</span></h1>
-    </header>
-    <aside class="hud hud--status glass" aria-label="Статус системи">
-      <div class="status-row"><span>API</span><span id="status-api" class="pill pill--wait">…</span></div>
-      <div class="status-row"><span>WebSocket</span><span id="status-ws" class="pill pill--wait">…</span></div>
-      <div class="status-row"><span>Env</span><span id="status-env" class="mono">—</span></div>
-      <div class="status-row"><span>Signal</span><span id="status-signal" class="mono">—</span></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Інтерактивний 3D-редактор і симулятор для проєктування, налаштування та тестування нейромереж." />
+  <title>Digital Twin of Neural Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <canvas id="scene"></canvas>
+  <header class="hud hud--top glass">
+    <aside class="sidebar glass">
+      <h2 class="sidebar_instruments" Instruments></h2>
+      <div class="sidebar_actions">
+        <button id="btn-add-node" class="btn">+ Add Node</button>
+        <button id="btn-remove-node" class="btn">- Remove Node</button>
+      </div>
+      <div class="sidebar_actions">
+        <h3>Node Properties</h3>
+        <p class="muted">Select node in 3D</p>
+      </div>
     </aside>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <h1 class="brand"><span class="brand__dot"></span>Digital Twin <span class="brand__muted">of Neural Network</span>
+    </h1>
+  </header>
+  <aside class="hud hud--status glass" aria-label="Статус системи">
+    <div class="status-row"><span>API</span><span id="status-api" class="pill pill--wait">…</span></div>
+    <div class="status-row"><span>WebSocket</span><span id="status-ws" class="pill pill--wait">…</span></div>
+    <div class="status-row"><span>Env</span><span id="status-env" class="mono">—</span></div>
+    <div class="status-row"><span>Signal</span><span id="status-signal" class="mono">—</span></div>
+  </aside>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
