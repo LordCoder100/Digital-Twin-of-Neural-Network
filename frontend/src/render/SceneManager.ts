@@ -23,8 +23,8 @@ export class SceneManager {
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping
 
     this.scene = new THREE.Scene()
-    this.scene.background = new THREE.Color('#0a0c16')
-    this.scene.fog = new THREE.FogExp2('#0a0c16', 0.045)
+    this.scene.background = new THREE.Color('#f0f2f5')
+    this.scene.fog = new THREE.FogExp2('#f0f2f5', 0.045)
 
     this.camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 200)
     this.camera.position.set(9, 5, 11)
