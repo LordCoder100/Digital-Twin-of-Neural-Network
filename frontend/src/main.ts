@@ -13,6 +13,12 @@ const canvas = document.querySelector<HTMLCanvasElement>('#scene')!
 const sceneManager = new SceneManager(canvas)
 const networkView = new NetworkView(sceneManager.scene)
 
+const addBtn = document.getElementById('btn-add-node')
+addBtn?.addEventListener('click', () => {
+  console.log('Клік по кнопці! Тут буде створення 3D-сфери')
+})
+
+
 // 3. Signal state shared between network and WebSocket
 let currentSignal = 0
 
